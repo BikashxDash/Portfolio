@@ -24,7 +24,7 @@ export default function Hero() {
   }, [isMobile, reducedMotion]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden" aria-label="Introduction">
+    <section className="relative min-h-screen w-full overflow-hidden" aria-label="Introduction">
       {/* Grid pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -55,7 +55,7 @@ export default function Hero() {
       />
 
       {/* Content: text left, photo right */}
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-6xl flex-col items-center justify-center gap-12 px-6 md:flex-row md:justify-center md:gap-24 md:px-16">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center gap-10 px-6 pb-16 pt-28 md:flex-row md:justify-center md:gap-24 md:px-16" >
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function Hero() {
           className="max-w-xl text-center md:text-left"
         >
           <p className="mb-3 font-mono text-sm text-text-secondary">Bikash Dash</p>
-          <h1 className="font-display text-4xl font-semibold leading-tight text-text-primary md:text-6xl">
+          <h1 className="font-display text-3xl font-semibold leading-tight text-text-primary md:text-6xl">
             Full-stack developer, building toward SDE roles.
           </h1>
           <p className="mt-5 max-w-md text-base text-text-secondary md:text-lg">
