@@ -43,7 +43,7 @@ export default function Hero() {
           "--x": "50%",
           "--y": "40%",
           background:
-            "radial-gradient(600px circle at var(--x) var(--y), rgba(41,151,255,0.12), transparent 70%)",
+            "radial-gradient(600px circle at var(--x) var(--y), rgba(99,102,241,0.12), transparent 70%)",
           transition: reducedMotion ? "none" : "background 0.05s linear",
         }}
       />
@@ -51,7 +51,7 @@ export default function Hero() {
       {/* Soft ambient glow */}
       <div
         className="pointer-events-none absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, #2997FF, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #6366F1, transparent 70%)" }}
       />
 
       {/* Content: text left, photo right */}

@@ -14,7 +14,7 @@ module.exports = {
         border: "rgba(255,255,255,0.10)",
         "text-primary": "#F5F5F7",
         "text-secondary": "#86868B",
-        accent: "#2997FF",
+        accent: "#6366F1",
       },
       fontFamily: {
         display: ["-apple-system", "SF Pro Display", "Inter", "sans-serif"],

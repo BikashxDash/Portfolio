@@ -129,7 +129,7 @@ export default function Work() {
     <section id="work" className="relative w-full overflow-hidden px-6 py-24 md:px-16 md:py-32">
       <div
         className="pointer-events-none absolute -right-40 top-1/4 h-[400px] w-[400px] rounded-full opacity-[0.08] blur-3xl"
-        style={{ background: "radial-gradient(circle, #2997FF, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #6366F1, transparent 70%)" }}
       />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
