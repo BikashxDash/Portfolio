@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #0A0A0C;
-  --foreground: #F5F5F7;
+:root,
+[data-theme="dark"] {
+  --bg: #0A0A0C;
+  --surface: #131316;
+  --surface-glass: rgba(255, 255, 255, 0.06);
+  --border-color: rgba(255, 255, 255, 0.10);
+  --text-primary: #F5F5F7;
+  --text-secondary: #86868B;
+}
+
+[data-theme="light"] {
+  --bg: #F2F2F4;
+  --surface: #F5F5F7;
+  --surface-glass: rgba(0, 0, 0, 0.04);
+  --border-color: rgba(0, 0, 0, 0.10);
+  --text-primary: #1D1D1F;
+  --text-secondary: #6E6E73;
 }
 
 * {
@@ -16,15 +30,15 @@ html {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--text-primary);
+  background: var(--bg);
   font-family: -apple-system, "SF Pro Display", "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Visible keyboard focus everywhere, Apple-strict */
 :focus-visible {
-  outline: 2px solid #6366f1;
+  outline: 2px solid #6366F1;
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -45,8 +59,8 @@ body {
     text-wrap: balance;
   }
   .glass-panel {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: var(--surface-glass);
+    border: 1px solid var(--border-color);
     backdrop-filter: blur(20px);
   }
 }

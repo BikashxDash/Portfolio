@@ -27,10 +27,10 @@ export default function Hero() {
     <section id="about" className="relative min-h-screen w-full overflow-hidden" aria-label="Introduction">
       {/* Grid pattern */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #F5F5F7 1px, transparent 1px), linear-gradient(to bottom, #F5F5F7 1px, transparent 1px)",
+            "linear-gradient(to right, var(--text-primary) 1px, transparent 1px), linear-gradient(to bottom, var(--text-primary) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
         }}
       />
@@ -62,7 +62,9 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-xl text-center md:text-left"
         >
-          <p className="mb-3 font-mono text-sm text-text-secondary">Bikash Dash</p>
+          <p className="mb-4 inline-block rounded-full border border-border bg-surface-glass px-5 py-2 font-mono text-base text-text-secondary">
+            Bikash Dash
+          </p>
           <h1 className="font-display text-3xl font-semibold leading-tight text-text-primary md:text-6xl">
             Full-stack developer, building toward SDE roles.
           </h1>

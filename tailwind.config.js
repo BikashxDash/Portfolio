@@ -8,12 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: "#0A0A0C",
-        surface: "#131316",
-        "surface-glass": "rgba(255,255,255,0.06)",
-        border: "rgba(255,255,255,0.10)",
-        "text-primary": "#F5F5F7",
-        "text-secondary": "#86868B",
+        bg: "var(--bg)",
+        surface: "var(--surface)",
+        "surface-glass": "var(--surface-glass)",
+        border: "var(--border-color)",
+        "text-primary": "var(--text-primary)",
+        "text-secondary": "var(--text-secondary)",
         accent: "#6366F1",
       },
       fontFamily: {

@@ -19,7 +19,10 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between">
         {/* Pill 1: name */}
         <div className="glass-panel rounded-full px-5 py-2.5">
-          <a href="#" className="font-display text-sm font-semibold text-text-primary">
+          <a
+            href="#"
+            className="inline-block font-display text-sm font-semibold text-accent transition-transform duration-300 hover:scale-110"
+          >
             <span className="md:hidden">B</span>
             <span className="hidden md:inline">Bikash Dash</span>
           </a>
@@ -32,7 +35,7 @@ export default function Nav() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm text-text-secondary transition-colors hover:text-text-primary"
+                  className="inline-block text-sm text-text-secondary transition-all duration-300 hover:scale-110 hover:text-accent"
                 >
                   {link.label}
                 </a>
@@ -84,7 +87,7 @@ export default function Nav() {
                   <a
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block text-base text-text-secondary transition-colors hover:text-text-primary"
+                    className="inline-block text-sm text-text-secondary transition-all duration-300 hover:scale-125 hover:text-accent"
                   >
                     {link.label}
                   </a>

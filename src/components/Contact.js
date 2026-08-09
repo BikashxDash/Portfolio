@@ -79,10 +79,10 @@ export default function Contact() {
         style={{ background: "radial-gradient(circle, #6366F1, transparent 70%)" }}
       />
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #F5F5F7 1px, transparent 1px), linear-gradient(to bottom, #F5F5F7 1px, transparent 1px)",
+            "linear-gradient(to right, var(--text-primary) 1px, transparent 1px), linear-gradient(to bottom, var(--text-primary) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
         }}
       />
@@ -93,7 +93,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-3 font-mono text-sm text-text-secondary"
+          className="mb-4 inline-block rounded-full border border-border bg-surface-glass px-5 py-2 text-base font-mono text-text-secondary"
         >
           Contact
         </motion.p>
