@@ -24,7 +24,7 @@ export default function Hero() {
   }, [isMobile, reducedMotion]);
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden" aria-label="Introduction">
+    <section id="about" className="relative min-h-screen w-full overflow-hidden" aria-label="Introduction">
       {/* Grid pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"

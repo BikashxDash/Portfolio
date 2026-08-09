@@ -5,8 +5,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 
 const LINKS = [
-  { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Work", href: "#work" },
   { label: "Contact", href: "#contact" },
 ];
 
