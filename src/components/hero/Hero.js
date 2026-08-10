@@ -55,7 +55,7 @@ export default function Hero() {
       />
 
       {/* Content: text left, photo right */}
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center gap-10 px-6 pb-16 pt-28 md:flex-row md:justify-center md:gap-24 md:px-16" >
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center gap-10 px-6 pb-16 pt-28 lg:flex-row lg:justify-center lg:gap-24 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function Hero() {
             Full-stack developer, building toward SDE roles.
           </h1>
           <p className="mt-5 max-w-md text-base text-text-secondary md:text-lg">
-            Final-year B.Tech CSE at BPUT. I design and ship complete products — from database to interface.
+            I turn ideas into products people actually use — clean code, thoughtful design, end to end.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
             <a
@@ -93,7 +93,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="relative h-56 w-56 shrink-0 overflow-hidden rounded-full border border-border md:h-96 md:w-96"
+          className="relative h-56 w-56 shrink-0 overflow-hidden rounded-full border border-border md:h-72 md:w-72 lg:h-96 lg:w-96"
         >
           <div className="absolute inset-0 flex items-center justify-center bg-surface font-display text-4xl text-text-secondary">
             BD

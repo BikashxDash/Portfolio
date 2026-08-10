@@ -7,29 +7,26 @@ const PROJECTS = [
   {
     name: "Taskline",
     description:
-      "Real-time full-stack task management app with live collaboration, built as an internship submission.",
+      "Real-time task management app with live collaboration, built as an internship submission.",
     stack: ["Next.js", "TypeScript", "Socket.IO", "NextAuth.js"],
     github: "https://github.com/BikashxDash/Taskline",
     live: "",
-    image: "Taskline.webp",
   },
   {
     name: "College Management System",
     description:
-      "Role-based platform for attendance, records, and academics with real-time updates and OTP-verified login. My primary solo-built project.",
+      "Role-based platform for attendance and academics with OTP-verified login. My primary solo project.",
     stack: ["Next.js", "PostgreSQL", "Prisma", "Socket.IO"],
     github: "https://github.com/BikashxDash/College-Management-System",
     live: "",
-    image: "public/CMS.jpg",
   },
   {
     name: "Ledger",
     description:
-      "Budget tracker with a dark-gold aesthetic — built for web and as a native Android app.",
+      "Budget tracker with a dark-gold aesthetic, built for both web and native Android.",
     stack: ["React", "Kotlin", "MVVM", "Room"],
     github: "https://github.com/BikashxDash/Ledger",
     live: "",
-    image: null,
   },
   {
     name: "Habitual",
@@ -38,16 +35,14 @@ const PROJECTS = [
     stack: ["React", "Recharts"],
     github: "https://github.com/BikashxDash/Habitual",
     live: "",
-    image: null,
   },
   {
     name: "Calculator",
     description:
-      "A clean, functional calculator built with vanilla HTML, CSS, and JavaScript — no frameworks.",
+      "A clean, functional calculator built with vanilla HTML, CSS, and JavaScript.",
     stack: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/BikashxDash/Calculator",
     live: "",
-    image: null,
   },
 ];
 
@@ -61,13 +56,12 @@ function ProjectCard({ project, index }) {
       whileHover={{ y: -6 }}
       className="group relative overflow-hidden rounded-2xl border border-border bg-surface transition-shadow duration-300 hover:shadow-2xl"
     >
-      {/* Preview area — placeholder until real screenshots are added */}
       <div className="relative flex h-48 w-full items-center justify-center overflow-hidden border-b border-border bg-bg">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
             backgroundImage:
-              "linear-gradient(to right, #F5F5F7 1px, transparent 1px), linear-gradient(to bottom, #F5F5F7 1px, transparent 1px)",
+              "linear-gradient(to right, var(--text-primary) 1px, transparent 1px), linear-gradient(to bottom, var(--text-primary) 1px, transparent 1px)",
             backgroundSize: "32px 32px",
           }}
         />
@@ -80,7 +74,7 @@ function ProjectCard({ project, index }) {
         <h3 className="font-display mb-2 text-xl font-semibold text-text-primary">
           {project.name}
         </h3>
-        <p className="mb-5 text-sm leading-relaxed text-text-secondary">
+        <p className="mb-5 line-clamp-2 text-sm leading-relaxed text-text-secondary">
           {project.description}
         </p>
 
@@ -95,29 +89,25 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
 
-        <div className="flex gap-5">
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-text-primary"
-            >
-              <Code2 size={15} strokeWidth={1.75} />
-              Code
-            </a>
-          )}
-          {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-text-primary"
-            >
-              <ExternalLink size={15} strokeWidth={1.75} />
-              Live
-            </a>
-          )}
+        <div className="flex gap-3">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm text-text-secondary transition-colors hover:text-text-primary"
+          >
+            <Code2 size={15} strokeWidth={1.75} />
+            Code
+          </a>
+          <a
+            href={project.live || "#"}
+            target={project.live ? "_blank" : undefined}
+            rel="noopener noreferrer"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm text-white transition-opacity hover:opacity-90"
+          >
+            <ExternalLink size={15} strokeWidth={1.75} />
+            Live
+          </a>
         </div>
       </div>
     </motion.div>
@@ -135,8 +125,8 @@ export default function Work() {
         className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, var(--text-primary) 1px, transparent 1px), linear-gradient(to bottom, var(--text-primary) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
+            "linear-gradient(to right, var(--text-primary) 1.5px, transparent 1.5px), linear-gradient(to bottom, var(--text-primary) 1.5px, transparent 1.5px)",
+          backgroundSize: "48px 48px, 48px 48px",
         }}
       />
 
@@ -161,7 +151,7 @@ export default function Work() {
           Selected projects.
         </motion.h2>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project, i) => (
             <ProjectCard key={project.name} project={project} index={i} />
           ))}
