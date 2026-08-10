@@ -71,12 +71,13 @@ export default function Hero() {
           <p className="mt-5 max-w-md text-base text-text-secondary md:text-lg">
             Final-year B.Tech CSE at BPUT. I design and ship complete products — from database to interface.
           </p>
-          <div className="mt-8 flex justify-center gap-4 md:justify-start">
+          <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
             <a
-              href="#work"
+              href="/resume.pdf"
+              download
               className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
             >
-              See my work
+              Resume
             </a>
             <a
               href="#contact"

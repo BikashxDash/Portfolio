@@ -13,12 +13,12 @@
 }
 
 [data-theme="light"] {
-  --bg: #F2F2F4;
-  --surface: #F5F5F7;
-  --surface-glass: rgba(0, 0, 0, 0.04);
-  --border-color: rgba(0, 0, 0, 0.10);
+  --bg: #E8E8EA;
+  --surface: #EFEFF1;
+  --surface-glass: rgba(0, 0, 0, 0.06);
+  --border-color: rgba(0, 0, 0, 0.16);
   --text-primary: #1D1D1F;
-  --text-secondary: #6E6E73;
+  --text-secondary: #55555A;
 }
 
 * {
