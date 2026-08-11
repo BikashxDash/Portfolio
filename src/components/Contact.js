@@ -60,13 +60,13 @@ const LINKS = [
   {
     label: "Instagram",
     value: "@bikashxdash",
-    href: "https://instagram.com/your_handle",
+    href: "https://instagram.com/bikashxdash",
     icon: (props) => <InstagramIcon {...props} />,
   },
   {
     label: "X",
     value: "@IAMBIKASHDASH",
-    href: "https://x.com/your_handle",
+    href: "https://x.com/IAMBIKASHDASH",
     icon: (props) => <XIcon {...props} />,
   },
 ];
