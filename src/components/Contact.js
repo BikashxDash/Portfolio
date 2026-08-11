@@ -105,7 +105,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
           className="font-display mb-6 max-w-xl text-3xl font-semibold leading-snug text-text-primary md:text-4xl"
         >
-          Let's talk.
+          Let&apos;s talk.
         </motion.h2>
 
         <motion.p
