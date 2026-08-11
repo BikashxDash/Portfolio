@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Code2, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const PROJECTS = [
   {
@@ -11,6 +12,7 @@ const PROJECTS = [
     stack: ["Next.js", "TypeScript", "Socket.IO", "NextAuth.js"],
     github: "https://github.com/BikashxDash/Taskline",
     live: "",
+    image: "/projects/taskline.png",
   },
   {
     name: "College Management System",
@@ -19,6 +21,7 @@ const PROJECTS = [
     stack: ["Next.js", "PostgreSQL", "Prisma", "Socket.IO"],
     github: "https://github.com/BikashxDash/College-Management-System",
     live: "",
+    image: "/projects/college-management-system.png",
   },
   {
     name: "Ledger",
@@ -27,6 +30,7 @@ const PROJECTS = [
     stack: ["React", "Kotlin", "MVVM", "Room"],
     github: "https://github.com/BikashxDash/Ledger",
     live: "",
+    image: "/projects/ledger.png",
   },
   {
     name: "Habitual",
@@ -35,6 +39,7 @@ const PROJECTS = [
     stack: ["React", "Recharts"],
     github: "https://github.com/BikashxDash/Habitual",
     live: "",
+    image: "/projects/habitual.png",
   },
   {
     name: "Calculator",
@@ -43,6 +48,7 @@ const PROJECTS = [
     stack: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/BikashxDash/Calculator",
     live: "",
+    image: "/projects/calculator.png",
   },
 ];
 
@@ -65,9 +71,18 @@ function ProjectCard({ project, index }) {
             backgroundSize: "32px 32px",
           }}
         />
-        <span className="font-display relative text-2xl font-semibold text-text-secondary/40 transition-colors duration-300 group-hover:text-accent/60">
+        <span className="font-display relative z-0 text-2xl font-semibold text-text-secondary/40 transition-colors duration-300 group-hover:text-accent/60">
           {project.name}
         </span>
+        {project.image && (
+          <Image
+            src={project.image}
+            alt={project.name}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="relative z-10 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        )}
       </div>
 
       <div className="p-7">
