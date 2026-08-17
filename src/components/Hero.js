@@ -99,7 +99,7 @@ export default function Hero() {
             BD
           </div>
           <Image
-            src="/Bikash2.jpg"
+            src="/Bikash.jpg"
             alt="Bikash Dash"
             fill
             sizes="384px"
