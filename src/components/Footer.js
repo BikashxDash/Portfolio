@@ -35,11 +35,22 @@ function XIcon(props) {
   );
 }
 
+function SubstackIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <g transform="translate(3.5, 3.5) scale(0.7)">
+        <path d="M3 3h18v3.2H3V3zm0 5.6h18V12H3V8.6zm0 5.6h18v6.1L12 16.8 3 20.3v-6.1z" />
+      </g>
+    </svg>
+  );
+}
+
 const SOCIALS = [
-  { label: "LinkedIn", href: "https://linkedin.com/in/bikash-dash-844b70338", icon: LinkedInIcon },
+  { label: "LinkedIn", href: "https://linkedin.com/in/bikashxdash", icon: LinkedInIcon },
   { label: "GitHub", href: "https://github.com/BikashxDash", icon: GithubIcon },
   { label: "Instagram", href: "https://instagram.com/bikashxdash", icon: InstagramIcon },
-  { label: "X", href: "https://x.com/IAMBIKASHDASH", icon: XIcon },
+  { label: "X", href: "https://x.com/BikashxDash", icon: XIcon },
+  { label: "Substack", href: "https://bikashdash.substack.com", icon: SubstackIcon },
 ];
 
 export default function Footer() {
