@@ -99,11 +99,11 @@ export default function Hero() {
             BD
           </div>
           <Image
-            src="/Bikash.jpg"
+            src="/Bikash2.jpg"
             alt="Bikash Dash"
             fill
-            sizes="288px"
-            className="relative z-10 object-cover"
+            sizes="384px"
+            className="relative z-10 object-cover scale-100"
           />
         </motion.div>
       </div>
