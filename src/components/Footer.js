@@ -38,7 +38,7 @@ function XIcon(props) {
 function SubstackIcon(props) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <g transform="translate(3.5, 3.5) scale(0.7)">
+      <g transform="translate(2, 2) scale(0.83)">
         <path d="M3 3h18v3.2H3V3zm0 5.6h18V12H3V8.6zm0 5.6h18v6.1L12 16.8 3 20.3v-6.1z" />
       </g>
     </svg>
@@ -63,6 +63,7 @@ export default function Footer() {
           © {year} Bikash Dash. All rights reserved.
         </p>
         <p className="text-sm text-text-secondary">Made with ❤️</p>
+        <p className="font-mono text-xs text-text-secondary">v1.0.0</p>
 
         <div className="mt-2 flex items-center gap-7 rounded-full border border-border bg-transparent px-2 py-2">
           {SOCIALS.map((social) => {
