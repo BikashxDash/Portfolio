@@ -115,7 +115,7 @@ export default function Hero() {
       />
 
       {/* Content: text left, photo right */}
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center gap-10 px-6 pb-16 pt-28 lg:flex-row lg:justify-center lg:gap-24 lg:px-16">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center gap-10 px-4 pb-16 pt-28 lg:flex-row lg:justify-center lg:gap-24">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
