@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 
 const LINKS = [
+  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Work", href: "#work" },
@@ -13,9 +14,34 @@ const LINKS = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 40);
+
+      if (currentY < 80) {
+        setVisible(true);
+      } else if (currentY > lastScrollY.current) {
+        setVisible(false); // scrolling down
+      } else {
+        setVisible(true); // scrolling up
+      }
+      lastScrollY.current = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-4 z-50 w-full px-4">
+    <header
+      className="fixed top-4 z-50 w-full px-4 transition-transform duration-300 ease-out"
+      style={{ transform: visible ? "translateY(0)" : "translateY(-130%)" }}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between">
         {/* Pill 1: name */}
         <div className="glass-panel rounded-full px-5 py-2.5">
