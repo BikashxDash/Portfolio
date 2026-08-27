@@ -81,13 +81,13 @@ export default function Nav() {
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="glass-panel mx-auto mt-2 max-w-6xl rounded-2xl px-6 py-4 md:hidden"
           >
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col items-center gap-4 text-center">
               {LINKS.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="inline-block text-sm text-text-secondary transition-all duration-300 hover:scale-125 hover:text-accent"
+                    className="inline-block text-base text-text-secondary transition-all duration-300 hover:scale-105 hover:text-accent"
                   >
                     {link.label}
                   </a>

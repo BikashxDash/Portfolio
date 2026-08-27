@@ -14,11 +14,12 @@ import {
   School,
   GraduationCap,
   BookOpen,
+  Wrench,
 } from "lucide-react";
 
 const GROUPS = [
   {
-    tier: "Core",
+    tier: "Language",
     icon: Braces,
     color: "#A78BFA",
     items: [
@@ -45,6 +46,16 @@ const GROUPS = [
       { label: "Node.js", icon: Server },
       { label: "PostgreSQL", icon: Database },
       { label: "Prisma", icon: GitBranch },
+    ],
+  },
+  {
+    tier: "Tools",
+    icon: Wrench,
+    color: "#F472B6",
+    items: [
+      { label: "Git", icon: GitBranch },
+      { label: "GitHub", icon: Boxes },
+      { label: "VS Code", icon: Code2 },
     ],
   },
 ];
@@ -234,7 +245,7 @@ export default function Skills() {
           What I build with.
         </motion.h2>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {GROUPS.map((group, i) => (
             <SkillCard key={group.tier} group={group} index={i} />
           ))}
