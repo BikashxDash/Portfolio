@@ -14,7 +14,7 @@ module.exports = {
         border: "var(--border-color)",
         "text-primary": "var(--text-primary)",
         "text-secondary": "var(--text-secondary)",
-        accent: "#6366F1",
+        accent: "#4F46E5",
       },
       fontFamily: {
         display: ["-apple-system", "SF Pro Display", "Inter", "sans-serif"],

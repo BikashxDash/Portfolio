@@ -187,8 +187,9 @@ export default function Hero() {
             src="/Bikash.jpg"
             alt="Bikash Dash"
             fill
-            sizes="384px"
-            className="relative z-10 object-cover scale-100"
+            priority
+            sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+            className="relative z-10 object-cover scale-90"
           />
         </motion.div>
       </div>
