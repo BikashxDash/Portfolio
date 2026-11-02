@@ -227,7 +227,7 @@ const PROJECTS = [
       "A clean, functional calculator built with vanilla HTML, CSS, and JavaScript.",
     stack: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/BikashxDash/Calculator",
-    live: "",
+    live: "https://supercalcculator.netlify.app/",
     image: "",
   },
 ];
